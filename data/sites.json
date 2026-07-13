@@ -44,18 +44,6 @@
       "updatedAt": "2026-07-13"
     },
     {
-      "id": "qiniu",
-      "order": 5,
-      "name": "七牛云",
-      "url": "https://s.qiniu.com/MB3yMr",
-      "benefit": "送 300 额度",
-      "category": "大额度",
-      "recommended": false,
-      "active": true,
-      "notes": "",
-      "updatedAt": "2026-07-13"
-    },
-    {
       "id": "punycode-api",
       "order": 6,
       "name": "xn--vduyey89e",
