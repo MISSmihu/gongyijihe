@@ -138,6 +138,18 @@
       "active": true,
       "notes": "",
       "updatedAt": "2026-07-13"
+    },
+    {
+      "id": "bolobolo-mrjb0ubl",
+      "order": 36,
+      "name": "bolobolo",
+      "url": "https://api.bolobolo.online/",
+      "benefit": "暂无福利",
+      "category": "占坑",
+      "recommended": false,
+      "active": true,
+      "notes": "",
+      "updatedAt": "2026-07-13"
     }
   ]
 }
