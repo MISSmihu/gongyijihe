@@ -44,18 +44,6 @@
       "updatedAt": "2026-07-13"
     },
     {
-      "id": "ai-router",
-      "order": 7,
-      "name": "ai-router",
-      "url": "https://ai-router.dev/register?aff=RKJH52LCFTLN",
-      "benefit": "送 20 额度",
-      "category": "常规",
-      "recommended": false,
-      "active": true,
-      "notes": "",
-      "updatedAt": "2026-07-13"
-    },
-    {
       "id": "bluesminds",
       "order": 8,
       "name": "bluesminds",
