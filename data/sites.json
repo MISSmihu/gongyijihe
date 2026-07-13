@@ -56,18 +56,6 @@
       "updatedAt": "2026-07-13"
     },
     {
-      "id": "aisz",
-      "order": 9,
-      "name": "aisz",
-      "url": "https://api.aisz.mom/sign-up?aff=eury",
-      "benefit": "送少量额度，常有活动",
-      "category": "活动多",
-      "recommended": false,
-      "active": true,
-      "notes": "",
-      "updatedAt": "2026-07-13"
-    },
-    {
       "id": "zkmjnic",
       "order": 10,
       "name": "zkmjnic",
