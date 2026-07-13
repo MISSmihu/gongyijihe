@@ -14,9 +14,9 @@
 
 ## 首次部署
 
-1. 打开仓库的 `Settings > Pages`。
-2. 在 `Build and deployment` 中将 Source 设为 `GitHub Actions`。
-3. 打开仓库的 `Actions` 页面，等待 `Deploy GitHub Pages` 运行完成。
+首次推送后，`Deploy GitHub Pages` 工作流会自动初始化 Pages 并部署网站。打开仓库的 `Actions` 页面，等待该工作流运行完成即可。
+
+如果组织或仓库策略禁止自动初始化，请打开 `Settings > Pages`，在 `Build and deployment` 中将 Source 手动设为 `GitHub Actions`，然后重新运行工作流。
 
 以后每次向 `main` 分支提交内容，GitHub Actions 都会自动更新网站。
 
