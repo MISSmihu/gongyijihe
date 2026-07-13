@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f2f4f0">
+  <title>内容管理 | 公益集盒</title>
+  <link rel="icon" href="../assets/brand-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="admin-header">
+    <a class="brand" href="../" aria-label="返回公益集盒首页">
+      <img src="../assets/brand-mark.svg" alt="" width="30" height="30">
+      <span>
+        <strong>公益集盒</strong>
+        <small>内容管理</small>
+      </span>
+    </a>
+    <div class="header-actions">
+      <a href="../" class="ghost-button">查看网站</a>
+      <button id="disconnect-button" class="ghost-button" type="button" hidden>退出连接</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="auth-view" class="auth-view" aria-labelledby="auth-title">
+      <div class="auth-copy">
+        <p class="eyebrow">GITHUB CONTENTS API</p>
+        <h1 id="auth-title">连接仓库<br>开始维护内容</h1>
+        <p>使用仅限此仓库的 Fine-grained Token。Token 保存在当前浏览器会话中，只用于请求 GitHub API。</p>
+      </div>
+      <form id="auth-form" class="auth-form">
+        <div class="repo-summary">
+          <span>目标仓库</span>
+          <strong>MISSmihu/gongyijihe</strong>
+          <small>分支 main · data/sites.json</small>
+        </div>
+        <label for="github-token">GitHub Fine-grained Token</label>
+        <input id="github-token" name="token" type="password" placeholder="github_pat_..." required autocomplete="off" spellcheck="false">
+        <button id="connect-button" class="primary-button" type="submit">连接 GitHub</button>
+        <p class="form-note">Token 仅需选择该仓库，并授予 Contents: Read and write。</p>
+        <a class="token-link" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">创建 Fine-grained Token ↗</a>
+        <p id="auth-error" class="form-error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <section id="editor-view" class="editor-view" hidden>
+      <div class="editor-topbar">
+        <div>
+          <p class="eyebrow">CONTENT WORKSPACE</p>
+          <h1>内容管理</h1>
+        </div>
+        <div class="connection-state">
+          <span aria-hidden="true"></span>
+          <div>
+            <strong>已连接 GitHub</strong>
+            <small id="repo-state">正在同步仓库...</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="管理模块">
+        <button id="sites-tab" class="tab-button" type="button" role="tab" aria-selected="true" aria-controls="sites-panel">站点管理</button>
+        <button id="settings-tab" class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="settings-panel">页面设置</button>
+      </div>
+
+      <section id="sites-panel" role="tabpanel" aria-labelledby="sites-tab">
+        <div class="panel-toolbar">
+          <label class="admin-search" for="admin-search">
+            <span class="sr-only">搜索站点</span>
+            <input id="admin-search" type="search" placeholder="搜索站点或分类" autocomplete="off">
+          </label>
+          <div class="panel-actions">
+            <span id="admin-count" class="admin-count">0 个站点</span>
+            <button id="add-site-button" class="primary-button compact" type="button">+ 添加站点</button>
+          </div>
+        </div>
+
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">站点</th>
+                <th scope="col">福利说明</th>
+                <th scope="col">分类</th>
+                <th scope="col">状态</th>
+                <th scope="col"><span class="sr-only">操作</span></th>
+              </tr>
+            </thead>
+            <tbody id="admin-site-list"></tbody>
+          </table>
+        </div>
+        <div id="admin-empty" class="admin-empty" hidden>
+          <strong>没有匹配内容</strong>
+          <p>清除搜索后查看全部站点。</p>
+        </div>
+      </section>
+
+      <section id="settings-panel" role="tabpanel" aria-labelledby="settings-tab" hidden>
+        <form id="settings-form" class="settings-form">
+          <div class="settings-heading">
+            <div>
+              <h2>首页信息</h2>
+              <p>保存后会随站点数据一同发布。</p>
+            </div>
+            <span id="settings-date"></span>
+          </div>
+          <label>
+            <span>站点名称</span>
+            <input id="meta-title" name="title" required>
+          </label>
+          <label>
+            <span>首页简介</span>
+            <textarea id="meta-subtitle" name="subtitle" rows="3" required></textarea>
+          </label>
+          <label>
+            <span>顶部提醒</span>
+            <textarea id="meta-notice" name="notice" rows="4" required></textarea>
+          </label>
+          <label>
+            <span>数据来源链接</span>
+            <input id="meta-source" name="sourceUrl" type="url" required>
+          </label>
+          <button class="secondary-button" type="submit">应用页面设置</button>
+        </form>
+      </section>
+
+      <div class="publish-bar">
+        <div class="save-state">
+          <span id="dirty-dot" aria-hidden="true"></span>
+          <div>
+            <strong id="save-status">内容已同步</strong>
+            <small>发布会创建一次 GitHub 提交</small>
+          </div>
+        </div>
+        <button id="publish-button" class="primary-button publish-button" type="button" disabled>发布到网站</button>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="site-dialog" class="site-dialog">
+    <form id="site-form" method="dialog">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">SITE ENTRY</p>
+          <h2 id="dialog-title">添加站点</h2>
+        </div>
+        <button id="close-dialog" class="close-button" type="button" aria-label="关闭" title="关闭">×</button>
+      </div>
+
+      <input id="site-id" name="id" type="hidden">
+      <div class="form-grid">
+        <label>
+          <span>站点名称 *</span>
+          <input id="site-name" name="name" required maxlength="80">
+        </label>
+        <label>
+          <span>分类 *</span>
+          <input id="site-category" name="category" list="category-options" required maxlength="30">
+          <datalist id="category-options">
+            <option value="强推"></option>
+            <option value="大额度"></option>
+            <option value="常规"></option>
+            <option value="签到"></option>
+            <option value="活动多"></option>
+            <option value="低倍率"></option>
+          </datalist>
+        </label>
+        <label class="span-2">
+          <span>注册链接 *</span>
+          <input id="site-url" name="url" type="url" required placeholder="https://">
+        </label>
+        <label class="span-2">
+          <span>福利说明 *</span>
+          <input id="site-benefit" name="benefit" required maxlength="140">
+        </label>
+        <label>
+          <span>显示顺序</span>
+          <input id="site-order" name="order" type="number" min="1" step="1" required>
+        </label>
+        <label class="span-2">
+          <span>内部备注</span>
+          <textarea id="site-notes" name="notes" rows="3" maxlength="300"></textarea>
+        </label>
+      </div>
+
+      <div class="toggle-row">
+        <label class="check-control">
+          <input id="site-recommended" name="recommended" type="checkbox">
+          <span>优先推荐</span>
+        </label>
+        <label class="check-control">
+          <input id="site-active" name="active" type="checkbox" checked>
+          <span>前台显示</span>
+        </label>
+      </div>
+
+      <div class="dialog-actions">
+        <button id="cancel-site" class="secondary-button" type="button">取消</button>
+        <button class="primary-button" type="submit">保存内容</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="admin-toast" class="admin-toast" role="status" aria-live="polite"></div>
+  <script src="admin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="公益集盒：收集、筛选并持续维护可用的 AI API 公益站。">
+  <meta name="theme-color" content="#f4f6f2">
+  <title>公益集盒 | AI API 公益站导航</title>
+  <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#directory">跳到站点列表</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="公益集盒首页">
+        <img src="assets/brand-mark.svg" alt="" width="32" height="32">
+        <span>
+          <strong>公益集盒</strong>
+          <small>AI API DIRECTORY</small>
+        </span>
+      </a>
+      <nav class="header-actions" aria-label="站点导航">
+        <a class="text-link" href="#guide">使用提醒</a>
+        <a class="admin-link" href="admin/" aria-label="管理内容" title="管理内容">
+          <i data-lucide="settings-2" aria-hidden="true"></i>
+          <span>管理内容</span>
+        </a>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="切换深色模式" title="切换深色模式">
+          <i data-lucide="moon" aria-hidden="true"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro shell" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> 持续收录与维护</p>
+        <h1 id="page-title">找到合适的<br>AI API 公益站</h1>
+        <p id="page-subtitle" class="intro-text">把分散的公益站整理成一份清楚、好查、随时能更新的清单。</p>
+      </div>
+      <dl class="stats" aria-label="站点统计">
+        <div>
+          <dt id="total-count">--</dt>
+          <dd>收录站点</dd>
+        </div>
+        <div>
+          <dt id="category-count">--</dt>
+          <dd>内容分类</dd>
+        </div>
+        <div>
+          <dt id="update-date">--</dt>
+          <dd>最近整理</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="notice-band" aria-label="重要提醒">
+      <div class="shell notice-inner">
+        <i data-lucide="info" aria-hidden="true"></i>
+        <p id="notice-text">免费额度、倍率和可用模型可能随时调整，请以对应站点的实时页面为准。</p>
+      </div>
+    </section>
+
+    <section class="directory shell" id="directory" aria-labelledby="directory-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-index">01 / DIRECTORY</p>
+          <h2 id="directory-title">站点清单</h2>
+        </div>
+        <p>按名称、域名或福利内容查找</p>
+      </div>
+
+      <div class="toolbar" aria-label="筛选站点">
+        <label class="search-field" for="site-search">
+          <i data-lucide="search" aria-hidden="true"></i>
+          <input id="site-search" type="search" placeholder="搜索站点、域名或福利" aria-label="搜索站点" autocomplete="off">
+          <button id="clear-search" class="clear-search" type="button" aria-label="清除搜索" title="清除搜索" hidden>
+            <i data-lucide="x" aria-hidden="true"></i>
+          </button>
+        </label>
+        <label class="sort-field" for="site-sort">
+          <span>排序</span>
+          <select id="site-sort">
+            <option value="default">推荐优先</option>
+            <option value="name">名称 A-Z</option>
+            <option value="latest">最近更新</option>
+          </select>
+          <i data-lucide="chevron-down" aria-hidden="true"></i>
+        </label>
+      </div>
+
+      <div class="filter-row">
+        <div class="segmented" id="category-filters" aria-label="按分类筛选"></div>
+        <p id="result-summary" class="result-summary" aria-live="polite">正在载入...</p>
+      </div>
+
+      <div class="list-header" aria-hidden="true">
+        <span>站点</span>
+        <span>福利说明</span>
+        <span>分类</span>
+        <span>链接</span>
+      </div>
+      <div id="site-list" class="site-list" role="list" aria-busy="true">
+        <div class="loading-row"><span></span><span></span><span></span></div>
+        <div class="loading-row"><span></span><span></span><span></span></div>
+        <div class="loading-row"><span></span><span></span><span></span></div>
+      </div>
+      <div id="empty-state" class="empty-state" hidden>
+        <i data-lucide="search-x" aria-hidden="true"></i>
+        <h3>没有找到匹配站点</h3>
+        <p>换个关键词或清除筛选条件。</p>
+        <button id="reset-filters" class="secondary-button" type="button">重置筛选</button>
+      </div>
+    </section>
+
+    <section class="guide-band" id="guide" aria-labelledby="guide-title">
+      <div class="shell guide-grid">
+        <div>
+          <p class="section-index">02 / BEFORE YOU GO</p>
+          <h2 id="guide-title">使用前，请先确认</h2>
+        </div>
+        <div class="guide-items">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>额度会变化</h3>
+              <p>赠送额度、签到规则和模型倍率并非长期承诺，以站点实时说明为准。</p>
+            </div>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <h3>不要复用密码</h3>
+              <p>第三方站点请使用独立密码，不要上传隐私数据、密钥或敏感业务内容。</p>
+            </div>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <h3>链接可能含邀请</h3>
+              <p>部分注册链接带有邀请参数，注册双方可能获得相应额度或返利。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div>
+        <a class="brand footer-brand" href="./">
+          <img src="assets/brand-mark.svg" alt="" width="28" height="28">
+          <strong>公益集盒</strong>
+        </a>
+        <p>一个持续整理的 AI API 公益站导航。</p>
+      </div>
+      <div class="footer-meta">
+        <p>数据初始整理自 <a id="source-link" href="https://github.com/AX7795/free-api-sites" target="_blank" rel="noopener noreferrer">free-api-sites</a></p>
+        <p>© <span id="current-year"></span> 公益集盒 · 信息仅供参考</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/vendor/lucide.min.js"></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
