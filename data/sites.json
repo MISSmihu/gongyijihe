@@ -92,18 +92,6 @@
       "updatedAt": "2026-07-13"
     },
     {
-      "id": "univibe",
-      "order": 15,
-      "name": "univibe",
-      "url": "https://www.univibe.cc/console/auth?type=register&invite=US8RNC",
-      "benefit": "送 6000 额度",
-      "category": "大额度",
-      "recommended": false,
-      "active": true,
-      "notes": "",
-      "updatedAt": "2026-07-13"
-    },
-    {
       "id": "pie-xian",
       "order": 16,
       "name": "pie-xian",
