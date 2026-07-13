@@ -35,10 +35,10 @@
       "id": "api456",
       "order": 4,
       "name": "api456",
-      "url": "https://api456.me/register?aff=t2Fk",
-      "benefit": "送 35 额度",
+      "url": "https://api456.me/register?aff=kqOK",
+      "benefit": "送 35 额度，支持签到",
       "category": "常规",
-      "recommended": false,
+      "recommended": true,
       "active": true,
       "notes": "",
       "updatedAt": "2026-07-13"
