@@ -128,18 +128,6 @@
       "updatedAt": "2026-07-13"
     },
     {
-      "id": "vsllm",
-      "order": 19,
-      "name": "vsllm",
-      "url": "https://vsllm.com/register?aff=1O6b",
-      "benefit": "签到翻牌",
-      "category": "签到",
-      "recommended": false,
-      "active": true,
-      "notes": "",
-      "updatedAt": "2026-07-13"
-    },
-    {
       "id": "camel-hub",
       "order": 20,
       "name": "camel-hub",
