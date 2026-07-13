@@ -128,18 +128,6 @@
       "updatedAt": "2026-07-13"
     },
     {
-      "id": "camel-hub",
-      "order": 20,
-      "name": "camel-hub",
-      "url": "https://api.camel-hub.com/register?aff=yelf",
-      "benefit": "GPT 服务较稳定",
-      "category": "常规",
-      "recommended": false,
-      "active": true,
-      "notes": "",
-      "updatedAt": "2026-07-13"
-    },
-    {
       "id": "yuyuyu",
       "order": 21,
       "name": "yuyuyu",
