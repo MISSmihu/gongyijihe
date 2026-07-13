@@ -104,18 +104,6 @@
       "updatedAt": "2026-07-13"
     },
     {
-      "id": "pucoding",
-      "order": 17,
-      "name": "pucoding",
-      "url": "https://pucoding.com/?ref=7EXSLD",
-      "benefit": "送体验金",
-      "category": "常规",
-      "recommended": false,
-      "active": true,
-      "notes": "",
-      "updatedAt": "2026-07-13"
-    },
-    {
       "id": "tokeness",
       "order": 18,
       "name": "tokeness",
