@@ -59,10 +59,10 @@
       "id": "juziai",
       "order": 12,
       "name": "juziai",
-      "url": "https://api.juziai.cc/register?aff=hL7x",
+      "url": "https://api.juziai.cc/register?aff=wyRr",
       "benefit": "送 100 额度",
       "category": "常规",
-      "recommended": false,
+      "recommended": true,
       "active": true,
       "notes": "",
       "updatedAt": "2026-07-13"
