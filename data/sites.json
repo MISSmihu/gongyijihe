@@ -104,18 +104,6 @@
       "updatedAt": "2026-07-13"
     },
     {
-      "id": "tokeness",
-      "order": 18,
-      "name": "tokeness",
-      "url": "https://tokeness.io/sign-up?aff=RlsS",
-      "benefit": "送 10+，支持签到",
-      "category": "签到",
-      "recommended": false,
-      "active": true,
-      "notes": "",
-      "updatedAt": "2026-07-13"
-    },
-    {
       "id": "yuyuyu",
       "order": 21,
       "name": "yuyuyu",
