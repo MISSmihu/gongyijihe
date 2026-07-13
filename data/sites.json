@@ -299,10 +299,10 @@
       "id": "docode",
       "order": 25,
       "name": "docode",
-      "url": "https://docode.cc/register?aff=5YTo",
+      "url": "https://docode.cc/register?aff=D0OK",
       "benefit": "支持签到，送 300 美元额度",
       "category": "大额度",
-      "recommended": false,
+      "recommended": true,
       "active": true,
       "notes": "",
       "updatedAt": "2026-07-13"
