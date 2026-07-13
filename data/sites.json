@@ -68,18 +68,6 @@
       "updatedAt": "2026-07-13"
     },
     {
-      "id": "gemai",
-      "order": 13,
-      "name": "gemai",
-      "url": "https://api.gemai.cc/sign-up?aff=HPuT5ttR",
-      "benefit": "送 200 额度,支持签到",
-      "category": "大额度",
-      "recommended": true,
-      "active": true,
-      "notes": "",
-      "updatedAt": "2026-07-13"
-    },
-    {
       "id": "api520",
       "order": 14,
       "name": "api520",
