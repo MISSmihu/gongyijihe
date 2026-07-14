@@ -3,7 +3,7 @@
     "title": "公益集盒",
     "subtitle": "把分散的公益站整理成一份清楚、好查、随时能更新的清单。",
     "notice": "免费额度、倍率和可用模型可能随时调整，请以对应站点的实时页面为准。部分链接含邀请参数。",
-    "updatedAt": "2026-07-13",
+    "updatedAt": "2026-07-14",
     "sourceUrl": "https://github.com/AX7795/free-api-sites"
   },
   "sites": [
@@ -150,6 +150,18 @@
       "active": true,
       "notes": "",
       "updatedAt": "2026-07-13"
+    },
+    {
+      "id": "七倍算力-mrknsunj",
+      "order": 37,
+      "name": "七倍算力",
+      "url": "https://7x.hk/sign-up?aff=ekva",
+      "benefit": "注册送200刀，签到送20刀",
+      "category": "强推",
+      "recommended": true,
+      "active": true,
+      "notes": "",
+      "updatedAt": "2026-07-14"
     }
   ]
 }
