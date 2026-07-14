@@ -1,36 +1,38 @@
 :root {
   color-scheme: light;
-  --bg: #f4f6f2;
+  --bg: #f5f7f6;
   --surface: #ffffff;
-  --surface-muted: #e9ede8;
-  --ink: #14201c;
-  --muted: #64706a;
-  --line: #d5dbd5;
-  --strong-line: #b7c0b9;
-  --green: #173f35;
-  --green-bright: #27745e;
-  --orange: #ff6b3d;
-  --orange-soft: #fff0e9;
-  --focus: #147d64;
-  --shadow: 0 10px 30px rgba(20, 32, 28, 0.08);
+  --surface-muted: #edf1ef;
+  --ink: #18211d;
+  --muted: #65716b;
+  --line: #dce3df;
+  --strong-line: #bbc7c0;
+  --green: #1c5947;
+  --green-bright: #20775b;
+  --orange: #ed6b48;
+  --orange-soft: #fff1ec;
+  --focus: #1f7a5d;
+  --shadow: 0 14px 34px rgba(24, 33, 29, 0.08);
   --shell: 1180px;
+  --font-sans: "Segoe UI Variable Text", "Microsoft YaHei UI", "Microsoft YaHei", system-ui, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Microsoft YaHei UI", "Microsoft YaHei", system-ui, sans-serif;
 }
 
 [data-theme="dark"] {
   color-scheme: dark;
-  --bg: #101512;
-  --surface: #171d19;
-  --surface-muted: #202823;
-  --ink: #edf1ed;
-  --muted: #9ba69f;
-  --line: #303a34;
-  --strong-line: #465249;
-  --green: #9bcfbd;
-  --green-bright: #77bda5;
-  --orange: #ff7a50;
-  --orange-soft: #37231d;
-  --focus: #78c9ae;
-  --shadow: 0 12px 34px rgba(0, 0, 0, 0.28);
+  --bg: #111412;
+  --surface: #191d1b;
+  --surface-muted: #222724;
+  --ink: #f2f5f3;
+  --muted: #9aa59f;
+  --line: #2c342f;
+  --strong-line: #414b45;
+  --green: #b4dfcf;
+  --green-bright: #80c8ad;
+  --orange: #ff8b68;
+  --orange-soft: #30231f;
+  --focus: #7ccdaf;
+  --shadow: 0 16px 38px rgba(0, 0, 0, 0.24);
 }
 
 * {
@@ -50,8 +52,9 @@ body {
   min-width: 320px;
   background: var(--bg);
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: var(--font-sans);
   letter-spacing: 0;
+  text-rendering: optimizeLegibility;
   transition: background-color 180ms ease, color 180ms ease;
 }
 
@@ -164,7 +167,7 @@ select:focus-visible {
   border-radius: 6px;
   color: var(--muted);
   font-size: 14px;
-  font-weight: 650;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -240,9 +243,10 @@ p {
 h1 {
   max-width: 800px;
   margin: 0;
-  font-size: 58px;
-  font-weight: 760;
-  line-height: 1.06;
+  font-family: var(--font-display);
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.09;
 }
 
 .intro-text {
@@ -270,7 +274,7 @@ h1 {
 
 .stats dt {
   font-size: 30px;
-  font-weight: 740;
+  font-weight: 700;
 }
 
 .stats dd {
@@ -280,9 +284,9 @@ h1 {
 }
 
 .notice-band {
-  border-block: 1px solid #d84d26;
-  background: var(--orange);
-  color: #24130d;
+  border-block: 1px solid color-mix(in srgb, var(--orange) 38%, var(--line));
+  background: var(--orange-soft);
+  color: var(--ink);
 }
 
 .notice-inner {
@@ -296,12 +300,13 @@ h1 {
   flex: none;
   width: 18px;
   height: 18px;
+  color: var(--orange);
 }
 
 .notice-inner p {
   margin: 0;
   font-size: 14px;
-  font-weight: 680;
+  font-weight: 600;
   line-height: 1.55;
 }
 
@@ -327,7 +332,9 @@ h1 {
 .section-heading h2,
 .guide-band h2 {
   margin: 0;
-  font-size: 36px;
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 700;
   line-height: 1.15;
 }
 
@@ -425,7 +432,7 @@ h1 {
   color: var(--ink);
   cursor: pointer;
   font-size: 13px;
-  font-weight: 680;
+  font-weight: 600;
 }
 
 .sort-field svg {
@@ -470,7 +477,7 @@ h1 {
   color: var(--muted);
   cursor: pointer;
   font-size: 12px;
-  font-weight: 680;
+  font-weight: 600;
 }
 
 .filter-button:hover {
@@ -493,7 +500,7 @@ h1 {
 .list-header,
 .site-row {
   display: grid;
-  grid-template-columns: minmax(230px, 1.3fr) minmax(180px, 1fr) 110px 106px;
+  grid-template-columns: minmax(290px, 1.55fr) minmax(170px, 0.9fr) 100px 102px;
   align-items: center;
   gap: 24px;
 }
@@ -504,7 +511,7 @@ h1 {
   border-bottom: 1px solid var(--strong-line);
   color: var(--muted);
   font-size: 11px;
-  font-weight: 760;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -514,7 +521,7 @@ h1 {
 
 .site-row {
   position: relative;
-  min-height: 92px;
+  min-height: 96px;
   padding: 16px 18px;
   border-bottom: 1px solid var(--line);
   background: transparent;
@@ -533,13 +540,7 @@ h1 {
 }
 
 .site-row.is-recommended::before {
-  position: absolute;
-  top: 22px;
-  bottom: 22px;
-  left: 0;
-  width: 3px;
-  background: var(--orange);
-  content: "";
+  display: none;
 }
 
 .site-identity {
@@ -573,6 +574,7 @@ h1 {
 }
 
 .site-name {
+  flex: 1;
   min-width: 0;
 }
 
@@ -582,32 +584,47 @@ h1 {
   gap: 7px;
   min-width: 0;
   font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
 .recommend-mark {
   display: inline-flex;
+  min-height: 20px;
   align-items: center;
   gap: 4px;
+  flex: none;
+  border: 1px solid color-mix(in srgb, var(--orange) 32%, var(--line));
+  border-radius: 4px;
+  padding: 0 6px;
+  background: var(--orange-soft);
   color: var(--orange);
   font-size: 10px;
-  font-weight: 780;
+  font-weight: 700;
 }
 
 .recommend-mark svg {
-  width: 12px;
-  height: 12px;
-  fill: currentColor;
+  width: 11px;
+  height: 11px;
 }
 
-.site-domain {
-  display: block;
+.site-url {
+  display: -webkit-box;
   max-width: 100%;
   overflow: hidden;
-  margin-top: 5px;
-  color: var(--muted);
-  font-size: 12px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  margin-top: 6px;
+  color: var(--green-bright);
+  font-size: 11px;
+  line-height: 1.45;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.site-url:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .benefit {
@@ -659,7 +676,7 @@ h1 {
   background: var(--green);
   color: var(--bg);
   font-size: 12px;
-  font-weight: 740;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -736,7 +753,7 @@ h1 {
   background: var(--surface);
   color: var(--ink);
   cursor: pointer;
-  font-weight: 680;
+  font-weight: 600;
 }
 
 .guide-band {
@@ -904,19 +921,20 @@ h1 {
   }
 
   .site-row.is-recommended::before {
-    top: 18px;
-    bottom: auto;
-    left: 20px;
-    width: 32px;
-    height: 3px;
+    display: none;
   }
 
   .site-row.is-recommended {
-    padding-top: 29px;
+    padding-top: 20px;
   }
 
   .site-identity {
     grid-column: 1 / -1;
+  }
+
+  .site-url {
+    min-height: 32px;
+    -webkit-line-clamp: 2;
   }
 
   .benefit {

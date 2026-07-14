@@ -145,7 +145,13 @@ function siteTemplate(site) {
         </span>
         <div class="site-name">
           <strong>${escapeHtml(site.name)} ${recommended}</strong>
-          <span class="site-domain" title="${escapeHtml(domain)}">${escapeHtml(domain)}</span>
+          <a
+            class="site-url"
+            href="${escapeHtml(site.url)}"
+            title="${escapeHtml(site.url)}"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >${escapeHtml(site.url)}</a>
         </div>
       </div>
       <p class="benefit">${escapeHtml(site.benefit)}</p>
@@ -192,7 +198,7 @@ function setTheme(theme) {
   elements.themeToggle.setAttribute("aria-label", isDark ? "切换浅色模式" : "切换深色模式");
   elements.themeToggle.setAttribute("title", isDark ? "切换浅色模式" : "切换深色模式");
   elements.themeToggle.innerHTML = `<i data-lucide="${isDark ? "sun" : "moon"}" aria-hidden="true"></i>`;
-  document.querySelector('meta[name="theme-color"]').content = isDark ? "#101512" : "#f4f6f2";
+  document.querySelector('meta[name="theme-color"]').content = isDark ? "#111412" : "#f5f7f6";
   if (window.lucide) window.lucide.createIcons();
 }
 
