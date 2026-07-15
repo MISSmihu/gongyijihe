@@ -87,9 +87,9 @@
       "benefit": "订阅送 1000+",
       "category": "大额度",
       "recommended": false,
-      "active": true,
+      "active": false,
       "notes": "",
-      "updatedAt": "2026-07-13"
+      "updatedAt": "2026-07-15"
     },
     {
       "id": "yuyuyu",
