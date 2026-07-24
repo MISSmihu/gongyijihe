@@ -198,6 +198,18 @@
       "active": true,
       "notes": "",
       "updatedAt": "2026-07-24"
+    },
+    {
+      "id": "beizhi中转-mrychg56",
+      "order": 8,
+      "name": "Beizhi中转",
+      "url": "https://beizhi.sylu.cc/sign-up?aff=1VwY",
+      "benefit": "走邀请注册送30支持签到",
+      "category": "常规",
+      "recommended": true,
+      "active": true,
+      "notes": "",
+      "updatedAt": "2026-07-24"
     }
   ]
 }
