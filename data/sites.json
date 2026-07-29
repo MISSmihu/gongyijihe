@@ -186,6 +186,30 @@
       "active": true,
       "notes": "",
       "updatedAt": "2026-07-24"
+    },
+    {
+      "id": "gorouter-ms5opo5c",
+      "order": 4,
+      "name": "gorouter",
+      "url": "https://gorouter.app/sign-up?aff=OIUP",
+      "benefit": "注册送70签到随机",
+      "category": "推荐",
+      "recommended": true,
+      "active": true,
+      "notes": "",
+      "updatedAt": "2026-07-29"
+    },
+    {
+      "id": "简直了-ms5oslsi",
+      "order": 7,
+      "name": "简直了",
+      "url": "https://jianzhile.vip/register?aff=SNaz",
+      "benefit": "注册送20签到送10",
+      "category": "强推",
+      "recommended": true,
+      "active": true,
+      "notes": "",
+      "updatedAt": "2026-07-29"
     }
   ]
 }
