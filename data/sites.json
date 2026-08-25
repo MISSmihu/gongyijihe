@@ -3,7 +3,7 @@
     "title": "公益集盒",
     "subtitle": "把分散的公益站整理成一份清楚、好查、随时能更新的清单。",
     "notice": "免费额度、倍率和可用模型可能随时调整，请以对应站点的实时页面为准。部分链接含邀请参数。",
-    "updatedAt": "2026-08-12",
+    "updatedAt": "2026-08-25",
     "sourceUrl": "https://github.com/AX7795/free-api-sites"
   },
   "sites": [
@@ -99,9 +99,9 @@
       "benefit": "支持签到，送 300 美元额度",
       "category": "大额度",
       "recommended": true,
-      "active": true,
+      "active": false,
       "notes": "",
-      "updatedAt": "2026-07-13"
+      "updatedAt": "2026-08-25"
     },
     {
       "id": "agentrouter-mrj6txvd",
