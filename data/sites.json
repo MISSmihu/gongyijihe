@@ -3,7 +3,7 @@
     "title": "公益集盒",
     "subtitle": "把分散的公益站整理成一份清楚、好查、随时能更新的清单。",
     "notice": "免费额度、倍率和可用模型可能随时调整，请以对应站点的实时页面为准。部分链接含邀请参数。",
-    "updatedAt": "2026-08-25",
+    "updatedAt": "2026-09-14",
     "sourceUrl": "https://github.com/AX7795/free-api-sites"
   },
   "sites": [
@@ -167,13 +167,13 @@
       "id": "beizhi中转-mrychg56",
       "order": 8,
       "name": "Beizhi中转",
-      "url": "https://beizhi.sylu.cc/sign-up?aff=1VwY",
+      "url": "http://beizhi.dedyn.io/sign-up?aff=1VwY",
       "benefit": "走邀请注册送30支持签到",
       "category": "常规",
       "recommended": true,
       "active": true,
       "notes": "",
-      "updatedAt": "2026-07-24"
+      "updatedAt": "2026-09-14"
     },
     {
       "id": "简直了-ms5oslsi",
